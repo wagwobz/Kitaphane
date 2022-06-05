@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3CymGjFHugdHBOXCZFfcOhj/Oqzi+yEmULQn0TfL0Ur7rnETPLiYCpgBs5+j1H3n/cHO+6/407XLMV+hMXVjWA==",
+  "dgSpecHash": "biNnkIjXZkLlswfUun5gM0E1eGqM5U6Zt1ljtTOkwpQj/80EUzlwbt5LBiDaBkSFjN55Kzk8fRT9JQoIdTCxCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\behza\\Desktop\\Kitaphane\\Kitaphane\\Kitaphane.csproj",
+  "projectFilePath": "C:\\Users\\behza\\Desktop\\KitaphaneRepo\\Kitaphane\\KitaphaneProje\\Kitaphane\\Kitaphane.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\behza\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\behza\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.17\\microsoft.aspnetcore.cryptography.internal.5.0.17.nupkg.sha512",

@@ -27,6 +27,8 @@ namespace Kitaphane.Controllers
             return View(await kitaphaneContext.ToListAsync());
         }
 
+
+        [AllowAnonymous]
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {
