@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Kitaphane.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">
+        <button class="button button1" type="button">
+            Create New
+        </button>
+    </a>
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.imageURL)
+            </th>
+            <th style="padding-right: 20px;">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th style="padding-right: 20px;">
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr style="margin-bottom:15px">
+            <td style="vertical-align: middle; padding-right: 15px; padding-block: 15px;" >
+                <img style="width: 80px; height: auto" src="@Html.DisplayFor(modelItem => item.imageURL)">
+            </td>
+            <td style="padding-right: 20px;">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td style="padding-right: 20px;">
+                @Html.DisplayFor(modelItem => item.Publisher.Name)
+            </td>
+            <td style="padding-right: 20px;">
+                @Html.DisplayFor(modelItem => item.Author.Name)
+            </td>
+            <td style="padding-right: 20px;">
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td style="padding-right: 20px;">
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td style="padding-right: 20px;">
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+
+            <td>
+
+                <br />
+                <br />
+                <a asp-area="" asp-controller="Home" asp-action="CreditCard">
+
+                    <button class="button button1" type="button">
+                        Purchase
+                    </button>
+                    <br />
+                </a>
+                <a asp-action="Edit" asp-route-id="@item.ID">
+                    <button class="button button1" type="button">
+                        Edit
+                    </button>
+
+                </a>
+                <br />
+                <a asp-action="Details" asp-route-id="@item.ID">
+
+                    <button class="button button1" type="button">
+                        Details
+                    </button>
+                </a>
+                <br />
+                <a asp-action="Delete" asp-route-id="@item.ID">
+                    <button class="button button1" type="button">
+                        Delete
+                    </button>
+                </a>
+                <br />
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

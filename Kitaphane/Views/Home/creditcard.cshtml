@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "CreditCard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .button {
+        border: none;
+        color: #FAFDD6;
+        padding: 10px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: #FAFDD6;
+        color: black;
+        border: 2px solid #A2B38B;
+    }
+
+        .button1:hover {
+            background-color: #A2B38B;
+            color: black;
+        }
+</style>
+
+<div class="text-center">
+    <br>
+    <h1 class="text-danger"> Address</h1>
+    <textarea rows="4" cols="50"></textarea>
+    <br><br>
+    <p>-----------------------------------------</p>
+    <br>
+    <h1 class="text-danger"> Info of Credit Card </h1>
+    <form action="/action_page.php">
+
+        <label for="fname">Card Name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="fname">Card Number:</label>
+        <input type="text" id="fname" name="fname" maxlength=16><br>
+        <label for="lname">Card Date:</label>
+        <input type="text" id="lname" name="lname" size=4 maxlength=4>
+        <label for="lname">CVC Number:</label>
+        <input type="text" id="lname" name="lname" size=3 maxlength=3><br><br>
+        <button class="button button1">Purchase Now</button>
+
+    </form>
+
+</div>
