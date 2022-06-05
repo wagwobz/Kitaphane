@@ -42,6 +42,8 @@ namespace Kitaphane.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+
+        [Authorize(Roles = "adminez,userez")]
         public IActionResult CreditCard()
         {
             return View();
